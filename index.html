@@ -1,0 +1,506 @@
+<!doctype html>
+<html lang="uz">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TexnoDunyo - Telefon va Qurilmalar (Bootstrap 5)</title>
+  <!-- Lokal Bootstrap 5 CSS fayli -->
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Lokal Bootstrap Icons fayli -->
+  <link rel="stylesheet" href="bootstrap-icons-1.13.2/bootstrap-icons.min.css" />
+  <!-- Sizning maxsus CSS faylingiz -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#asosiyMenyu">
+
+  <!-- 1-QISM: KONTEYNERLI MENYU (NAVBAR) VA DROPDOWN -->
+  <header class="sticky-top bg-white shadow-sm">
+    <nav id="asosiyMenyu" class="navbar navbar-expand-lg navbar-light container py-2">
+      <a class="navbar-brand d-flex align-items-center fw-bold text-primary" href="#">
+        <img src="logo.jpg" alt="Logotip" width="50" height="46" class="rounded me-2">
+        TexnoDunyo
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTarkibi">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarTarkibi">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 fw-semibold">
+          <li class="nav-item"><a class="nav-link" href="#boshsahifa">Bosh sahifa</a></li>
+
+          <!-- Oddiy Dropdown menyu -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+              Kategoriyalar
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#mahsulotlar"><i class="bi bi-phone me-2"></i>Smartfonlar</a></li>
+              <li><a class="dropdown-item" href="#mahsulotlar"><i class="bi bi-smartwatch me-2"></i>Aqlli soatlar</a></li>
+              <li><a class="dropdown-item" href="#mahsulotlar"><i class="bi bi-headphones me-2"></i>Aksessuarlar</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#solishtirish"><i class="bi bi-table me-2"></i>Narxlar jadvali</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item"><a class="nav-link" href="#video">Video</a></li>
+          <li class="nav-item"><a class="nav-link" href="#bizhaqimizda">Biz haqimizda</a></li>
+          <li class="nav-item"><a class="nav-link" href="#aloqa">Buyurtma va Aloqa</a></li>
+        </ul>
+
+        <!-- Tooltip o'rnatilgan Savatcha tugmasi -->
+        <div class="d-flex align-items-center gap-2">
+          <button class="btn btn-primary fw-semibold" data-bs-toggle="tooltip" data-bs-placement="bottom"
+            title="Tanlangan mahsulotlarni ko'rish">
+            <i class="bi bi-cart3 me-1"></i> Savatcha <span class="badge bg-light text-primary ms-1"
+              id="savatchasoni">0</span>
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- 2-QISM: BOOTSTRAP SLAYDER (CAROUSEL) -->
+  <section id="boshsahifa" class="mb-5">
+    <div id="asosiySlayder" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#asosiySlayder" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#asosiySlayder" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#asosiySlayder" data-bs-slide-to="2"></button>
+      </div>
+
+      <div class="carousel-inner">
+        <!-- 1-slayd -->
+        <div class="carousel-item active slayder-fon-1 text-white py-5">
+          <div class="container py-4">
+            <div class="row align-items-center">
+              <div class="col-lg-7">
+                <span class="badge bg-primary rounded-pill px-3 py-2 mb-3">Yangi kelgan</span>
+                <h1 class="display-5 fw-bold mb-3">Yetakchi qurilmalar eng yaxshi narxlarda</h1>
+                <p class="lead text-light mb-4">
+                  Eng so'nggi rusumdagi telefonlar, aqlli soatlar va aksessuarlarni 1 yillik rasmiy kafolat bilan xarid qiling.
+                </p>
+                <a href="#mahsulotlar" class="btn btn-primary btn-lg px-4 me-2">
+                  <i class="bi bi-bag-check me-1"></i> Xarid qilish
+                </a>
+                <!-- Popover tugmasi -->
+                <button type="button" class="btn btn-outline-light btn-lg" data-bs-toggle="popover"
+                  title="Rasmiy Kafolat"
+                  data-bs-content="Barcha mahsulotlarga TexnoDunyo servis markazi tomonidan 12 oylik bepul kafolat beriladi.">
+                  <i class="bi bi-shield-check me-1"></i> Kafolat shartlari
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2-slayd -->
+        <div class="carousel-item slayder-fon-2 text-white py-5">
+          <div class="container py-4">
+            <div class="row align-items-center">
+              <div class="col-lg-7">
+                <span class="badge bg-danger rounded-pill px-3 py-2 mb-3">Maxsus chegirma</span>
+                <h1 class="display-5 fw-bold mb-3">iPhone 15 Pro Max — 800 000 so'm tejang!</h1>
+                <p class="lead text-light mb-4">
+                  Titan korpus, A17 Pro chipi va professional kamera tizimi endi yanada hamyonbop narxda.
+                </p>
+                <a href="#mahsulotlar" class="btn btn-light text-dark fw-bold btn-lg px-4">Batafsil ko'rish</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3-slayd -->
+        <div class="carousel-item slayder-fon-3 text-white py-5">
+          <div class="container py-4">
+            <div class="row align-items-center">
+              <div class="col-lg-7">
+                <span class="badge bg-success rounded-pill px-3 py-2 mb-3">Bepul yetkazib berish</span>
+                <h1 class="display-5 fw-bold mb-3">Samarqand bo'ylab 2 soat ichida yetkazamiz</h1>
+                <p class="lead text-light mb-4">
+                  Onlayn buyurtma bering va mahsulotni qo'lingizga olganingizdan so'ng to'lov qiling.
+                </p>
+                <a href="#aloqa" class="btn btn-success btn-lg px-4">Buyurtma berish</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#asosiySlayder" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#asosiySlayder" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  </section>
+
+  <!-- 3-QISM: MAHSULOTLAR (3 XIL EKRANGA MOSLASHUVCHAN GRID + BUTTON DROPDOWN) -->
+  <main class="container my-5" id="mahsulotlar">
+    <div class="d-flex flex-wrap justify-content-between align-items-center mb-4 gap-2">
+      <div>
+        <h2 class="fw-bold mb-0">Ommabop mahsulotlar</h2>
+        <p class="text-muted mb-0">Telefon, planshet va kompyuter ekranlariga moslashuvchan katalog</p>
+      </div>
+
+      <!-- Button-li Dropdown (Split button dropdown) -->
+      <div class="btn-group">
+        <button type="button" class="btn btn-outline-primary">
+          <i class="bi bi-funnel me-1"></i> Saralash: Ommabop
+        </button>
+        <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown">
+          <span class="visually-hidden">Menyuni ochish</span>
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end">
+          <li><a class="dropdown-item" href="#mahsulotlar">Arzonidan qimmatiga</a></li>
+          <li><a class="dropdown-item" href="#mahsulotlar">Qimmatidan arzoniga</a></li>
+          <li><a class="dropdown-item" href="#mahsulotlar">Faqat chegirmadagilar</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- col-12 (telefon), col-md-6 (planshet), col-lg-3 (kompyuter) -->
+    <div class="row g-4">
+      <!-- 1-mahsulot -->
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card h-100 shadow-sm border-0 mahsulot-karta position-relative">
+          <span class="badge bg-danger position-absolute top-0 start-0 m-3" data-bs-toggle="tooltip"
+            title="5% chegirma amal qilmoqda">Chegirma</span>
+          <div class="rasm-qutisi bg-light p-3 d-flex align-items-center justify-content-center">
+            <img src="iphone 15 pro max.avif" class="img-fluid" alt="iPhone 15 Pro Max">
+          </div>
+          <div class="card-body d-flex flex-column">
+            <small class="text-uppercase text-muted fw-semibold">Smartfon</small>
+            <h5 class="card-title mt-1">iPhone 15 Pro Max 256GB</h5>
+            <div class="mt-auto pt-2">
+              <span class="fs-5 fw-bold text-dark d-block">14 200 000 so'm</span>
+              <small class="text-decoration-line-through text-muted">15 000 000 so'm</small>
+            </div>
+          </div>
+          <div class="card-footer bg-white border-0 pb-3">
+            <button class="btn btn-outline-primary w-100 fw-semibold savatcha-btn">
+              <i class="bi bi-cart-plus me-1"></i> Savatchaga qo'shish
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2-mahsulot -->
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card h-100 shadow-sm border-0 mahsulot-karta">
+          <div class="rasm-qutisi bg-light p-3 d-flex align-items-center justify-content-center">
+            <img src="S 24 ultr.avif" class="img-fluid" alt="Samsung Galaxy S24 Ultra">
+          </div>
+          <div class="card-body d-flex flex-column">
+            <small class="text-uppercase text-muted fw-semibold">Smartfon</small>
+            <h5 class="card-title mt-1">Samsung Galaxy S24 Ultra</h5>
+            <div class="mt-auto pt-2">
+              <span class="fs-5 fw-bold text-dark d-block">13 800 000 so'm</span>
+            </div>
+          </div>
+          <div class="card-footer bg-white border-0 pb-3">
+            <button class="btn btn-outline-primary w-100 fw-semibold savatcha-btn">
+              <i class="bi bi-cart-plus me-1"></i> Savatchaga qo'shish
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3-mahsulot -->
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card h-100 shadow-sm border-0 mahsulot-karta">
+          <div class="rasm-qutisi bg-light p-3 d-flex align-items-center justify-content-center">
+            <img src="apple watch series 9 gps.avif" class="img-fluid" alt="Apple Watch Series 9">
+          </div>
+          <div class="card-body d-flex flex-column">
+            <small class="text-uppercase text-muted fw-semibold">Aqlli soat</small>
+            <h5 class="card-title mt-1">Apple Watch Series 9 GPS</h5>
+            <div class="mt-auto pt-2">
+              <span class="fs-5 fw-bold text-dark d-block">4 000 000 so'm</span>
+            </div>
+          </div>
+          <div class="card-footer bg-white border-0 pb-3">
+            <button class="btn btn-outline-primary w-100 fw-semibold savatcha-btn">
+              <i class="bi bi-cart-plus me-1"></i> Savatchaga qo'shish
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4-mahsulot -->
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card h-100 shadow-sm border-0 mahsulot-karta">
+          <div class="rasm-qutisi bg-light p-3 d-flex align-items-center justify-content-center">
+            <img src="air pods pro.avif" class="img-fluid" alt="AirPods Pro">
+          </div>
+          <div class="card-body d-flex flex-column">
+            <small class="text-uppercase text-muted fw-semibold">Aksessuar</small>
+            <h5 class="card-title mt-1">AirPods Pro (2-avlod)</h5>
+            <div class="mt-auto pt-2">
+              <span class="fs-5 fw-bold text-dark d-block">2 000 000 so'm</span>
+            </div>
+          </div>
+          <div class="card-footer bg-white border-0 pb-3">
+            <button class="btn btn-outline-primary w-100 fw-semibold savatcha-btn">
+              <i class="bi bi-cart-plus me-1"></i> Savatchaga qo'shish
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- 4-QISM: JADVAL VA RO'YXATLAR (BOOTSTRAP TABLE & LIST-GROUP) -->
+  <section class="container my-5" id="solishtirish">
+    <div class="row g-4">
+      <!-- Jadval -->
+      <div class="col-12 col-lg-8">
+        <div class="card shadow-sm border-0 h-100">
+          <div class="card-header bg-primary text-white fw-bold">
+            <i class="bi bi-table me-2"></i> Qurilmalar texnik ko'rsatkichlari va narxlari
+          </div>
+          <div class="card-body p-0">
+            <div class="table-responsive">
+              <table class="table table-striped table-hover align-middle mb-0">
+                <thead class="table-dark">
+                  <tr>
+                    <th>#</th>
+                    <th>Qurilma nomi</th>
+                    <th>Xotira / Xususiyat</th>
+                    <th>Kafolat</th>
+                    <th>Narxi</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td class="fw-semibold">iPhone 15 Pro Max</td>
+                    <td>256 GB, Titan korpus</td>
+                    <td><span class="badge bg-success">12 oy</span></td>
+                    <td>14 200 000 so'm</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td class="fw-semibold">Samsung Galaxy S24 Ultra</td>
+                    <td>256 GB, S-Pen, Galaxy AI</td>
+                    <td><span class="badge bg-success">12 oy</span></td>
+                    <td>13 800 000 so'm</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td class="fw-semibold">Apple Watch Series 9</td>
+                    <td>45mm GPS, Suvga chidamli</td>
+                    <td><span class="badge bg-info text-dark">6 oy</span></td>
+                    <td>4 000 000 so'm</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td class="fw-semibold">AirPods Pro (2-avlod)</td>
+                    <td>USB-C, Shovqinni kamaytirish</td>
+                    <td><span class="badge bg-info text-dark">6 oy</span></td>
+                    <td>2 000 000 so'm</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bootstrap Ro'yxat (List-group) -->
+      <div class="col-12 col-lg-4">
+        <div class="card shadow-sm border-0 h-100">
+          <div class="card-header bg-dark text-white fw-bold">
+            <i class="bi bi-list-check me-2"></i> Xarid afzalliklari
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <span><i class="bi bi-patch-check-fill text-primary me-2"></i>100% Original mahsulot</span>
+              <span class="badge bg-primary rounded-pill">IMEI</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <span><i class="bi bi-truck text-success me-2"></i>Tezkor yetkazib berish</span>
+              <span class="badge bg-success rounded-pill">Bepul</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <span><i class="bi bi-credit-card text-warning me-2"></i>Bo'lib to'lash imkoniyati</span>
+              <span class="badge bg-warning text-dark rounded-pill">12 oy</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <span><i class="bi bi-headset text-info me-2"></i>24/7 Qo'llab-quvvatlash</span>
+              <span class="badge bg-info text-dark rounded-pill">Onlayn</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5-QISM: VIDEO MEDIA VA BOOTSTRAP PANELLAR (BIZ HAQIMIZDA) -->
+  <section class="bg-white py-5 border-top border-bottom" id="bizhaqimizda">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <!-- Media (Video) -->
+        <div class="col-12 col-md-6 text-center" id="video">
+          <div class="ratio ratio-16x9 rounded shadow overflow-hidden bg-dark">
+            <video controls poster="logo.jpg">
+              <source src="video.05.mp4" type="video/mp4">
+              Brauzeringiz ushbu videoni qo'llab-quvvatlamaydi.
+            </video>
+          </div>
+          <small class="text-muted d-block mt-2"><i class="bi bi-play-circle me-1"></i> TexnoDunyo video taqdimoti</small>
+        </div>
+
+        <!-- Bootstrap Panellar (Card + Accordion) -->
+        <div class="col-12 col-md-6">
+          <h2 class="fw-bold mb-3">Biz haqimizda</h2>
+          <p class="text-muted">
+            TexnoDunyo — original telefon va qurilmalarni rasmiy kafolat bilan sotadigan do'kon. Biz mijozlarga qulay narx, tez yetkazib berish va sifatli xizmat taqdim etamiz.
+          </p>
+
+          <div class="accordion" id="malumotPanellari">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button fw-semibold" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#panel1">
+                  <i class="bi bi-award text-primary me-2"></i> Nega aynan TexnoDunyo?
+                </button>
+              </h2>
+              <div id="panel1" class="accordion-collapse collapse show" data-bs-parent="#malumotPanellari">
+                <div class="accordion-body">
+                  Barcha smartfonlar rasmiy UzIMEI tizimidan ro'yxatdan o'tgan va zavod qadog'ida muhrlangan holda taqdim etiladi.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#panel2">
+                  <i class="bi bi-cash-coin text-success me-2"></i> To'lov turlari qanday?
+                </button>
+              </h2>
+              <div id="panel2" class="accordion-collapse collapse" data-bs-parent="#malumotPanellari">
+                <div class="accordion-body">
+                  Naqd pul, Uzcard, Humo, Visa kartalari hamda Click va Payme ilovalari orqali to'lov qilishingiz mumkin.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6-QISM: BOOTSTRAP FORMA (TEZKOR BUYURTMA VA ALOQA) -->
+  <section class="container my-5" id="aloqa">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-8 col-lg-6">
+        <div class="card shadow border-0">
+          <div class="card-header bg-dark text-white text-center py-3">
+            <h4 class="mb-0"><i class="bi bi-envelope-paper me-2"></i>Tezkor buyurtma qoldirish</h4>
+          </div>
+          <div class="card-body p-4">
+            <form>
+              <div class="mb-3">
+                <label for="ismInput" class="form-label fw-semibold">Ismingiz</label>
+                <input type="text" class="form-control" id="ismInput" placeholder="Masalan: Quvonchbek" required>
+              </div>
+
+              <div class="mb-3">
+                <label for="telInput" class="form-label fw-semibold">Telefon raqamingiz</label>
+                <div class="input-group">
+                  <span class="input-group-text"><i class="bi bi-telephone"></i></span>
+                  <input type="tel" class="form-control" id="telInput" placeholder="+998 90 123 45 67" required>
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label for="qurilmaSelect" class="form-label fw-semibold">Qurilmani tanlang</label>
+                <select class="form-select" id="qurilmaSelect">
+                  <option selected>iPhone 15 Pro Max 256GB</option>
+                  <option>Samsung Galaxy S24 Ultra</option>
+                  <option>Apple Watch Series 9 GPS</option>
+                  <option>AirPods Pro (2-avlod)</option>
+                </select>
+              </div>
+
+              <div class="mb-3">
+                <label for="izohTextarea" class="form-label fw-semibold">Manzil yoki qo'shimcha izoh</label>
+                <textarea class="form-control" id="izohTextarea" rows="2" placeholder="Samarqand shahri..."></textarea>
+              </div>
+
+              <div class="form-check mb-3">
+                <input class="form-check-input" type="checkbox" id="yetkazishCheck" checked>
+                <label class="form-check-label" for="yetkazishCheck">
+                  Kuryer orqali yetkazib berish kerak
+                </label>
+              </div>
+
+              <button type="submit" class="btn btn-primary w-100 fw-bold py-2">
+                <i class="bi bi-send me-1"></i> Buyurtmani yuborish
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7-QISM: PASTKI QISM (FOOTER) -->
+  <footer class="bg-dark text-light pt-5 pb-3 mt-5">
+    <div class="container">
+      <div class="row g-4 pb-4 border-bottom border-secondary">
+        <div class="col-12 col-md-4">
+          <h5 class="fw-bold text-white mb-3">TexnoDunyo</h5>
+          <p class="text-secondary small">
+            Samarqanddagi ishonchli gadjetlar va smartfonlar do'koni. Sifat va mijozlar ishonchi — bizning ustuvor vazifamiz.
+          </p>
+        </div>
+        <div class="col-12 col-md-4">
+          <h5 class="fw-bold text-white mb-3">Aloqa</h5>
+          <p class="mb-1 text-secondary"><i class="bi bi-telephone-fill text-primary me-2"></i> +998 93 979 13 66</p>
+          <p class="mb-0 text-secondary"><i class="bi bi-geo-alt-fill text-primary me-2"></i> Samarqand shahri</p>
+        </div>
+        <div class="col-12 col-md-4">
+          <h5 class="fw-bold text-white mb-3">Ish vaqti</h5>
+          <p class="mb-1 text-secondary"><i class="bi bi-calendar-week text-primary me-2"></i> Dushanba – Yakshanba</p>
+          <p class="mb-0 text-secondary"><i class="bi bi-clock text-primary me-2"></i> 09:00 – 21:00</p>
+        </div>
+      </div>
+      <p class="text-center text-secondary small pt-3 mb-0">
+        &copy; 2026 TexnoDunyo. Barcha huquqlar himoyalangan.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Lokal Bootstrap 5 JS Bundle fayli -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+
+  <!-- Tooltip, Popover va Savatcha hisoblagichini ishga tushirish -->
+  <script>
+    // Tooltip'larni faollashtirish
+    const tooltipList = [...document.querySelectorAll('[data-bs-toggle="tooltip"]')]
+      .map(el => new bootstrap.Tooltip(el));
+
+    // Popover'larni faollashtirish
+    const popoverList = [...document.querySelectorAll('[data-bs-toggle="popover"]')]
+      .map(el => new bootstrap.Popover(el));
+
+    // Savatchaga qo'shish tugmalari ishlashi uchun
+    let soni = 0;
+    const savatchaSpan = document.getElementById('savatchasoni');
+    document.querySelectorAll('.savatcha-btn').forEach(tugma => {
+      tugma.addEventListener('click', () => {
+        soni++;
+        savatchaSpan.textContent = soni;
+      });
+    });
+  </script>
+
+</body>
+
+</html>

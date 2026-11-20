@@ -1,0 +1,41 @@
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  background-color: #f8fafc;
+  color: #1e293b;
+}
+
+/* Slayder fonlari */
+.slayder-fon-1 {
+  background: linear-gradient(135deg, #1e293b, #0f172a);
+}
+
+.slayder-fon-2 {
+  background: linear-gradient(135deg, #1e3a8a, #0f172a);
+}
+
+.slayder-fon-3 {
+  background: linear-gradient(135deg, #064e3b, #0f172a);
+}
+
+/* Mahsulot rasmlari bir xil balandlikda turishi uchun */
+.rasm-qutisi {
+  height: 210px;
+}
+
+.rasm-qutisi img {
+  max-height: 180px;
+  object-fit: contain;
+}
+
+.mahsulot-karta {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.mahsulot-karta:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
